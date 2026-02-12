@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.top-bar{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding :8px;
+    font-size: 14px;
+}
+.top-bar span{
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.navbar{
+    background:#f5b400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+.serch-bar{
+    display: flex;
+    width:40%;
+}
+.serch-bar input{
+    flex: 1;
+    padding: 8px;
+    border: none;
+}
+.serch-bar button{
+    padding: 8px 15px;
+    background:#ff4d00;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.cart{
+    color: white;
+    font-weight: bold;
+}
+.hero {
+    height: 500px;
+    background: url("https://images.unsplash.com/photo-1520975916090-3105956dac38") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.products {
+    padding: 50px;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.card {
+    background: #f3f3f3;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.price {
+    color: red;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+}
