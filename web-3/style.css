@@ -23,7 +23,7 @@
 }
 .hero{
     position: relative;
-    height: 600px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,38 +32,47 @@
     text-align: center;
     overflow: hidden;
 }
-.hero h1,
-.hero p,
-.hero button{
-position: relative;
+.hero .backimg{
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.hero .backimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);  /* Dark overlay */
+    z-index: -1;
 }
 .hero h1{
-    font-size:50px;
+    font-size:60px;
     font-weight: bold;
-    color:black
+    margin-bottom:15px;
 }
 .hero p{
-    text-align: center;
-    font-size: 20px;
-    margin: 5px 0;
-    padding: auto;
-    font-weight:bold;
-    color:black;
+    font-size: 22px;
+    margin-bottom: 25px;
 }
 .hero button{
-    padding: 12px 25px;
-    border-radius:30%;
-    background-color: aqua;
-    color: black;
+    padding: 14px 35px;
+    border-radius:30px;
+    border:none;
+    background-color:#00bcd4;
+    color:white;
+    font-size: 16px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 .hero button:hover{
-    background-color: rgb(194, 111, 55);
-    color: rgb(13, 13, 13);
+    background-color: #ff6b35;
+    transform: scale(1.05);
 }
-
-
-
 
 
 .backimg{
@@ -76,4 +85,126 @@ position: relative;
     min-width: 100%;
     background-size: cover;
     background-position: center;
+}
+.content{
+    text-align: center;
+    padding: 60px 30px;
+    background-image:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyaXN8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+    margin: 40px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position :relative;
+    color:white;
+    overflow:hidden;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.content h2,
+.content p{
+    position: relative;
+    z-index: 1;
+}
+.content h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight:bold;
+
+    background: linear-gradient(to right,#9ece8b,#ce74cb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content p{
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+.card{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: 40px;
+    border-radius: 12px;
+}
+.card-item{
+    flex: 1;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+.card-item:hover{
+    transform: translateY(-10px);
+    background-color: #fff8f0;
+}
+.card img{
+    width:100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card-item h3{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:10px 0 5px 0;
+    font-weight: bold;
+    color: rgb(13, 13, 13);
+}
+.card-item p{
+    text-align: center;
+    font-size: 14px;
+    color:#555;
+}
+.card-item button{
+    marigin-top:auto;
+    padding:8px 18px;
+    border:none;
+    border-radius: 20px;
+    background-color: #0077ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.card-item button:hover{
+    background-color: #0056c7;
+}
+
+.footer{
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+}
+
+.footer p{
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer a{
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.footer a:hover{
+    color: white;
+    text-decoration: underline;
 }
