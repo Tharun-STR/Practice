@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    background-image: url("https://www.webintravel.com/wp-content/uploads/2020/08/GettyImages-1160176759-1066x440.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(11, 10, 10);
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* Booking Form Section */
+.booking-form {
+    background-color: white;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #d71b1b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #ff1b1b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    .booking-form {
+        margin: 20px;
+        padding: 20px;
+    }
+};
+.back-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-home button{
+    padding: 40x 20px;
+    background-color: #d71b1b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
