@@ -2,39 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Travel Inc - Booking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="booking.css">
 </head>
 <body>
-    <div class="banner">
-        <h1>Book Your Travel Experience</h1>
-        <p>Fill out the form below to start planning your next adventure.</p>
+    <div class="header">
+        <div class="overlay">
+            <h1>TRAVEL INC.</h1>
+            <p>Book your next adventure with us</p>
+        </div>
     </div>
-    <div class="booking-form">
-        <form action="#" method="post">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
+    <div class="container">
+        <h2>Booking Form</h2>
+        <p class="subtitle">Please fill out the form to complete your reservation.</p>
 
-            <label for="destination">Destination:</label>
-            <input type="text" id="destination" name="destination" required>
+        <form class="booking-form" id="bookingForm">
 
-            <label for="dates">Travel Dates:</label>
-            <input type="text" id="dates" name="dates" required>
+            <h3>Passenger Information</h3>
 
-            <button type="submit">Submit</button>
+            <label>First Name *</label>
+            <input type="text" placeholder="Enter first name" id="firstName" required>
+            <small class="error" id="fnameError"></small>
+
+            <label>Last Name *</label>
+            <input type="text" placeholder="Enter last name" id="lastName" required>
+            <small class="error" id="lnameError"></small>
+
+            <label>Date of Birth *</label>
+            <input type="date" id="dob" required>
+            <small class="error" id="dobError"></small>
+
+            <label>Gender *</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" required> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Other</label>
+            </div>
+            <small class="error" id="genderError"></small>
+
+            <label>Email *</label>
+            <input type="email" placeholder="Enter email address" id="email" required>
+            <small class="error" id="emailError"></small>
+            <button type="submit">Confirm Booking</button>
+
         </form>
     </div>
-
-    <div class="back-home">
-            <a href="index.html">
-                <button class="back-button">Back to Home</button>
-            </a>
-    </div>
-
+    <script src="script.js"></script>
 
 </body>
 </html>
