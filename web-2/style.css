@@ -1,4 +1,6 @@
-
+body{
+  background:var(--primary-color);
+}
 .top-bar{
     background-color: rgb(11, 11, 11);
     padding: 10px;
@@ -30,6 +32,17 @@
     left: 0;
     z-index: 2;
 }
+.dark-theme{
+  --primary-color:#000106;
+  --secondary-color:#fff;
+}
+
+
+
+#icon{
+  width:30px;
+  cursor:pointer;
+}
 .hero{
     position: relative;
     height: 600px;
@@ -37,7 +50,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color:white;
+    color:var(--primary-color);
     text-align: center;
     overflow: hidden;
 
@@ -52,7 +65,7 @@
 .hero h1{
     font-size: 80px;
     font-weight: bold;
-    color:black
+    color:var(--secondary-color);
 }
 .hero p{
     text-align: center;
@@ -107,11 +120,12 @@
   }
   
   .card {
-    background: #fff;
+    background:var(--primary-color);
     width: 220px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--secondary-color);
     transition: 0.3s ease;
   }
   
@@ -136,6 +150,7 @@
   
   .card h3 {
     margin: 10px 0 5px;
+    color:var(--secondary-color);
   }
   
   .card p {
@@ -148,6 +163,7 @@
     margin-top: 15px;
     font-weight: bold;
     font-size: 18px;
+    color:var(--secondary-color);
   }
 
 
