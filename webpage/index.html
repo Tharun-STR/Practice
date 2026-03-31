@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <div class="container">
+    <img src="https://www.logoai.com/oss/icons/2021/10/27/rRWiZMXIlMsdf2Z.png" class="logo" />
+
+    <div class="content">
+      <p>Website is under maintenance</p>
+      <h1>We are <span>Launching</span> Soon</h1>
+
+      <div class="launch-time">
+        <div><p id="days">00</p><span>Days</span></div>
+        <div><p id="hours">00</p><span>Hours</span></div>
+        <div><p id="minutes">00</p><span>Minutes</span></div>
+        <div><p id="seconds">00</p><span>Seconds</span></div>
+      </div>
+
+      <button onclick="alert('More details coming soon!')">Learn More</button>
+    </div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" class="rocket" />
+  </div>
+
+  <script>
+    var countDownDate = new Date("Apr 25, 2026 00:00:00").getTime();
+
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".launch-time").innerHTML = "<p> We are Live!</p>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

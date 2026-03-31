@@ -1,0 +1,135 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+  
+      body {
+        overflow-x: hidden;
+      }
+  
+      .container {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+        background-size: cover;
+        background-position: center;
+        padding: 20px 8%;
+        position: relative;
+        color: #fff;
+      }
+  
+      .logo {
+        width: 120px;
+      }
+  
+      .content {
+        max-width: 600px;
+        margin-top: 10%;
+      }
+  
+      .content p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        color: #ccc;
+      }
+  
+      .content h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+  
+      .content h1 span {
+        color: #ff4b2b;
+      }
+  
+      .launch-time {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+  
+      .launch-time div {
+        background: rgba(255,255,255,0.1);
+        padding: 15px 20px;
+        border-radius: 10px;
+        text-align: center;
+        min-width: 70px;
+      }
+  
+      .launch-time p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      button {
+        background: #ff4b2b;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+  
+      button:hover {
+        background: #ff6a4d;
+        transform: scale(1.05);
+      }
+  
+      .rocket {
+        width: 180px;
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        animation: rocket 5s linear infinite;
+      }
+  
+      @keyframes rocket {
+        0% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-300px);
+          opacity: 0;
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .content {
+          margin-top: 20%;
+        }
+  
+        .content h1 {
+          font-size: 2.2rem;
+        }
+  
+        .rocket {
+          width: 120px;
+          right: 2%;
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .content h1 {
+          font-size: 1.8rem;
+        }
+  
+        .launch-time div {
+          padding: 10px;
+          min-width: 60px;
+        }
+  
+        .rocket {
+          display: none;
+        }
+      }
